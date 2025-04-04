@@ -3,7 +3,7 @@ def curr_val(num:int):
     number until the value is 100 or greater and print it."""
     return num*2 
 def main():
-    user_number=int(input("Enter a number you want to double"))
+    user_number=int(input("Enter a number you want to double: "))
     while user_number < 100:
         double_val=curr_val(user_number)
     # curr_value=num*2

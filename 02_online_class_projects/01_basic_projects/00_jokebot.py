@@ -15,7 +15,7 @@
 #     main()
 
 # second way
-prompt:str="What do you Want to print?"
+prompt:str="What do you want to print?"
 joke:str="Why do Java developers wear glasses?Because they don’t C#! 😆👓"
 sorry:str="Sorry ! I only print jokes"
 def main():
