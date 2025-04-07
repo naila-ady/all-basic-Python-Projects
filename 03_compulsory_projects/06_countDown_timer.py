@@ -12,10 +12,11 @@
 import time
 
 def countdown(t):
+    print ("CountDown Starts")
     while t:
         mins, secs = divmod(t, 60)  # Calculate minutes and seconds
         timer = "{:02d}:{:02d}".format(mins, secs)  # Format the time
-        print(timer, end='\r')  # Use '\r' to overwrite the timer in the same line
+        print(f" {mins:02d}:{secs:02d}") 
         time.sleep(1)  # Wait for 1 second
         t -= 1  # Decrease the time by 1 second
     

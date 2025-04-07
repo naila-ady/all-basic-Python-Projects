@@ -4,7 +4,7 @@ def hangman():
     words = ["apple", "banana", "orange", "grape", "peach"]
     word = random.choice(words)
     guessed = "_" * len(word)
-    attempts = 6
+    attempts = 8
     guessed_letters = []
 
     print("Welcome to Hangman!")
