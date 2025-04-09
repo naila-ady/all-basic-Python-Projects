@@ -34,7 +34,7 @@ with st.container():
  
         )
     with right_column:
-        image=Image.open("assetsforwebsite/developer_image.jpg")
+        image=Image.open("assetsforwebsite/developer_image.png")
         st.image(image, caption='Web developer and AI enthusiast',use_container_width=True)
         
 # projects
@@ -53,7 +53,7 @@ with st.container():
     st.subheader("MY STREAMLIT PROJECT")
     image_column, text_column = st.columns((1, 2))
     with image_column:
-        image = Image.open("assetsforwebsite/lib_image.jpg")
+        image = Image.open("assetsforwebsite/lib_image.png")
 
         st.image(image, caption='Library Mangement', use_container_width=True)
          
@@ -66,7 +66,7 @@ with st.container():
     st.subheader("MY NEXTJS PROJECT")
     image_column, text_column = st.columns((1, 2))
     with image_column:
-        image = Image.open("assetsforwebsite/ai_website.jpg")
+        image = Image.open("assetsforwebsite/ai_website.png")
         st.image(image, caption='Agentia AI', use_container_width=True)
         
 
