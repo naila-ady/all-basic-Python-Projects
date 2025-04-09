@@ -1,6 +1,10 @@
 import streamlit as st
 from PIL import Image
+import os
 
+# Get the directory of the current script
+current_dir = os.path.dirname(os.path.abspath(__file__))
+assets_dir = os.path.join(current_dir, "assetsforwebsite")
 
 st.set_page_config(page_title="My Website", page_icon=":tada:🧿", layout="wide")
 
@@ -18,7 +22,7 @@ with st.container():
     st.write("---")
     left_column, right_column = st.columns((1,1))
     with left_column:
-        st.markdown("# What I’m Passionate About")
+        st.markdown("# What I'm Passionate About")
         st.markdown(
             """
             <div style="font-size:26px;">
@@ -34,7 +38,8 @@ with st.container():
  
         )
     with right_column:
-        image=Image.open("assetsforwebsite/developer_image.png")
+        image_path = os.path.join(assets_dir, "developer_image.png")
+        image = Image.open(image_path)
         st.image(image, caption='Web developer and AI enthusiast',use_container_width=True)
         
 # projects
@@ -53,8 +58,8 @@ with st.container():
     st.subheader("MY STREAMLIT PROJECT")
     image_column, text_column = st.columns((1, 2))
     with image_column:
-        image = Image.open("assetsforwebsite/lib_image.png")
-
+        image_path = os.path.join(assets_dir, "lib_image.png")
+        image = Image.open(image_path)
         st.image(image, caption='Library Mangement', use_container_width=True)
          
     with text_column:
@@ -66,7 +71,8 @@ with st.container():
     st.subheader("MY NEXTJS PROJECT")
     image_column, text_column = st.columns((1, 2))
     with image_column:
-        image = Image.open("assetsforwebsite/ai_website.png")
+        image_path = os.path.join(assets_dir, "ai_website.png")
+        image = Image.open(image_path)
         st.image(image, caption='Agentia AI', use_container_width=True)
         
 
