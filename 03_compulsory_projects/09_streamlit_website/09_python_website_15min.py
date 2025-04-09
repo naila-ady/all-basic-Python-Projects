@@ -34,7 +34,7 @@ with st.container():
  
         )
     with right_column:
-        image = Image.open("assetsforwebsite/developer_image.jpg"  )
+        image=Image.open("assetsforwebsite/developer_image.jpg")
         st.image(image, caption='Web developer and AI enthusiast',use_container_width=True)
         
 # projects
