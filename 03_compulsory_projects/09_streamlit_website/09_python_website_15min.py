@@ -55,7 +55,7 @@ with st.container():
                 designing a personal portfolio, creating intelligent automation, or developing data-driven applications, 
                 each project reflects my passion for learning and building with purpose.""")
 
-    # --- Streamlit Project Section ---
+    # --- Streamlit Project Section ----
     st.subheader("MY STREAMLIT PROJECT")
     image_column, text_column = st.columns((1, 2))
     with image_column:
