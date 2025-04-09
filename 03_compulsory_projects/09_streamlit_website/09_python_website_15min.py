@@ -1,20 +1,10 @@
-import requests
 import streamlit as st
-from streamlit_lottie import st_lottie
 from PIL import Image
 
 
 st.set_page_config(page_title="My Website", page_icon=":tada:🧿", layout="wide")
 
-# Function to load Lottie animation from a URL
-def load_lottieurl(url):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
-
-# Correct animation URL (JSON-based)
-lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_1pxqjqps.json")  # Developer animation
+         
 
 # Top Section
 with st.container():
@@ -26,11 +16,12 @@ with st.container():
 # What I Do Section
 with st.container():
     st.write("---")
-    left_column, right_column = st.columns(2)
+    left_column, right_column = st.columns((1,1))
     with left_column:
-        st.markdown("# What I do")
-        st.write(
+        st.markdown("# What I’m Passionate About")
+        st.markdown(
             """
+            <div style="font-size:26px;">
             Welcome to my personal website! I'm a passionate web developer and an AI enthusiast currently 
             pursuing my studies at GIAIC. With a keen interest in agentic AI, I am driven to learn HTML ,CSS,TYPESCRIPT,
             NExtJS,JAVASCRIPT,FIGMA ,PYTHON and to explore and 
@@ -39,11 +30,14 @@ with st.container():
             strive to learn, grow, and apply my skills in both AI and web development. If you'd like to 
             learn more about my work and projects, feel free to explore further by clicking the link above. 
             I'm always open to new opportunities and collaborations!
-            """
+            """ , unsafe_allow_html=True
+ 
         )
     with right_column:
-        st_lottie(lottie_coding, height=300, key="coding")
-
+        image = Image.open("assetsforwebsite/developer_image.jpg"  )
+        st.image(image, caption='Web developer and AI enthusiast',use_container_width=True)
+        
+# projects
 with st.container():
     st.write("------")
     st.header("MY PROJECTS")
@@ -80,14 +74,13 @@ with st.container():
         st.header("AGENTIA AI WEBSITE")
         st.write("Check out my latest project built with Next.js: the interactive AgentiaOne website.")
         st.markdown("[Watch my Next.js Project](https://agentiaone.vercel.app/)")
+    
+    
     # CONTACT
     with st.container():  
         st.write("-------")
         st.header("Get In Contact With Me:")
         st.write("##")
-        
-    
-
     contact_form = """
         <style>
         form {
